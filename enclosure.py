@@ -30,3 +30,4 @@ class Enclosure:
 
         self.animals.append(animal)
         return f"{animal.name} added to {self.name}"
+    
