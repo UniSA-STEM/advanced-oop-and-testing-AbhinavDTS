@@ -59,4 +59,9 @@ def demo():
     print(alice.clean_enclosure(savannah))
     print()
 
+    # Health Checks
+    print(dr_bob.perform_health_check(leo, description="Limping on front left paw", severity="Medium",
+                                      treatment="Restricted activity; analgesic prescribed."))
+    print()
+
 
