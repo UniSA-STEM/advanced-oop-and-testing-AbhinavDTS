@@ -23,3 +23,16 @@ def demo():
     for a in [leo, molly, slither]:
         print(f"{a.__class__.__name__}(name='{a.name}', species='{a.species}', age={a.age}, category='{a.category}')")
     print()
+
+    # Create Enclosures
+    savannah = Enclosure("Savannah Exhibit", 200.0, "Savannah", cleanliness=85)
+    aviary = Enclosure("Aviary", 50.0, "Forest", cleanliness=90)
+    reptile_house = Enclosure("Reptile House", 80.0, "Tropical", cleanliness=95)
+
+    enclosures = [savannah, aviary, reptile_house]
+
+    print("Created enclosures:")
+    for e in enclosures:
+        print(
+            f"Enclosure '{e.name}' [{e.environment_type}] - Cleanliness: {e.cleanliness}% - Animals: {e.list_animals() or 'No animals'}")
+    print()
