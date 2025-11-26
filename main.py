@@ -13,3 +13,13 @@ from staff import Zookeeper, Veterinarian
 
 def demo():
     print("=== Zoo System Demo ===\n")
+
+    # Create Animals
+    leo = Mammal("Leo", "Lion", 5, diet="Carnivore")
+    molly = Bird("Molly", "Parrot", 2)
+    slither = Reptile("Slither", "Corn Snake", 3)
+
+    print("Created animals:")
+    for a in [leo, molly, slither]:
+        print(f"{a.__class__.__name__}(name='{a.name}', species='{a.species}', age={a.age}, category='{a.category}')")
+    print()
