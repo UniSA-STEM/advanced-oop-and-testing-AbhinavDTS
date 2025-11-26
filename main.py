@@ -53,3 +53,10 @@ def demo():
     print(reptile_house.add_animal(slither))
     print()
 
+    # Staff Actions
+    print(alice.feed_animal(leo))
+    print(alice.feed_animal(molly))
+    print(alice.clean_enclosure(savannah))
+    print()
+
+
