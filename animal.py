@@ -8,7 +8,7 @@ This is my own work as defined by the University's Academic Integrity Policy.
 # Represents a health issue for an animal, including its details, severity, and treatment status.
 
 
-from datetime import date
+
 
 from datetime import date
 
@@ -75,3 +75,10 @@ class Mammal(Animal):
 
     def make_sound(self):
         return f"{self.name} the {self.species} makes a mammal sound"
+
+class Bird(Animal):
+    def __init__(self, name, species, age, diet="Omnivore"):
+        super().__init__(name, species, age, category="Bird", diet=diet)
+
+    def make_sound(self):
+        return f"{self.name} the {self.species} chirps"
