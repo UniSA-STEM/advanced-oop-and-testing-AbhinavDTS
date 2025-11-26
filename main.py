@@ -70,5 +70,16 @@ def demo():
         print(e.report_status())
     print()
 
+    # Animal Sounds
+    print("Animal sounds:")
+    for a in [leo, molly, slither]:
+        print(a.make_sound())
+    print()
+
+
+if __name__ == "__main__":
+    demo()
+
+
 
 
