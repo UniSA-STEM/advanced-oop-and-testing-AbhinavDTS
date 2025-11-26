@@ -83,3 +83,11 @@ class Bird(Animal):
 
     def make_sound(self):
         return f"{self.name} the {self.species} chirps"
+
+#The Reptile class represents any reptile in the zoo by automatically assigning it to the reptile category, using a default carnivorous diet, and giving it a distinctive hissing sound that reflects typical reptile behaviour.
+class Reptile(Animal):
+    def __init__(self, name, species, age, diet="Carnivore"):
+        super().__init__(name, species, age, category="Reptile", diet=diet)
+
+    def make_sound(self):
+        return f"{self.name} the {self.species} hisses"
