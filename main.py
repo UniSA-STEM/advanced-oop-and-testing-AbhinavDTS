@@ -64,4 +64,11 @@ def demo():
                                       treatment="Restricted activity; analgesic prescribed."))
     print()
 
+    # Enclosure Reports
+    print("Enclosure Reports:")
+    for e in enclosures:
+        print(e.report_status())
+    print()
+
+
 
