@@ -68,4 +68,10 @@ class Animal:
             if rec.status == "Active":
                 return False
         return True
+#The paticular Mammal class shows and represents the type of mamamls are there in animals by setting their category to Mammal and providing a mammal specific sounds
+class Mammal(Animal):
+    def __init__(self, name, species, age, diet="Omnivore"):
+        super().__init__(name, species, age, category="Mammal", diet=diet)
 
+    def make_sound(self):
+        return f"{self.name} the {self.species} makes a mammal sound"
