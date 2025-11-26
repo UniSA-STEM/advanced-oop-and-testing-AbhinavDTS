@@ -76,6 +76,7 @@ class Mammal(Animal):
     def make_sound(self):
         return f"{self.name} the {self.species} makes a mammal sound"
 
+#This paticular class represents the Bird class which helps the animals to be catergriozed as birds by setting their category to as brids and defining a bird specific chirping sound.
 class Bird(Animal):
     def __init__(self, name, species, age, diet="Omnivore"):
         super().__init__(name, species, age, category="Bird", diet=diet)
