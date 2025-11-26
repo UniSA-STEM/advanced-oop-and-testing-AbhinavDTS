@@ -30,4 +30,26 @@ class Enclosure:
 
         self.animals.append(animal)
         return f"{animal.name} added to {self.name}"
-    
+
+#These methods let the enclosure manage animals, stay clean, and provide a status report of its details and residents.
+    def remove_animal(self, animal):
+        if animal in self.animals:
+            self.animals.remove(animal)
+            return f"{animal.name} removed from {self.name}"
+        return f"{animal.name} not found in {self.name}"
+
+    def list_animals(self):
+        return [f"{a.name}({a.species})" for a in self.animals] if self.animals else []
+
+    def clean(self):
+        self.cleanliness = 100
+        return f"{self.name} has been cleaned"
+
+    def report_status(self):
+        return {
+            "name": self.name,
+            "size": self.size,
+            "environment": self.environment_type,
+            "cleanliness": self.cleanliness,
+            "animals": self.list_animals() if self.animals else "No animals"
+        }
