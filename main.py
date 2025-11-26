@@ -45,3 +45,11 @@ def demo():
     print(f"{alice.name} - {alice.role}")
     print(f"{dr_bob.name} - {dr_bob.role}")
     print()
+
+    # Add animals to enclosures
+    print("Adding animals to enclosures...")
+    print(savannah.add_animal(leo))
+    print(aviary.add_animal(molly))
+    print(reptile_house.add_animal(slither))
+    print()
+
