@@ -20,6 +20,7 @@ class Staff:
 
     def assign_enclosure(self, enclosure):
         self.assigned_enclosures.append(enclosure)
+
 # The Zookeeper class represents a staff member specialized in animal care, able to feed animals and clean enclosures while automatically having the role “Zookeeper.”
 class Zookeeper(Staff):
     def __init__(self, name):
@@ -30,4 +31,13 @@ class Zookeeper(Staff):
 
     def clean_enclosure(self, enclosure):
         return enclosure.clean()
+
+#The Veterinarian class represents a staff member specialized in animal health, able to perform check up by recording health issues and treatments and with the role automatically set to veteriarian.
+class Veterinarian(Staff):
+    def __init__(self, name):
+        super().__init__(name, role="Veterinarian")
+
+    def perform_health_check(self, animal, description, severity="Low", treatment="None"):
+        animal.add_health_issue(description, severity=severity, treatment=treatment)
+        return f"{animal.name} health: {animal.get_health_report()}"
 
