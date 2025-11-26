@@ -36,3 +36,12 @@ def demo():
         print(
             f"Enclosure '{e.name}' [{e.environment_type}] - Cleanliness: {e.cleanliness}% - Animals: {e.list_animals() or 'No animals'}")
     print()
+
+    # Create Staff
+    alice = Zookeeper("Alice")
+    dr_bob = Veterinarian("Dr Bob")
+
+    print("Staff created:")
+    print(f"{alice.name} - {alice.role}")
+    print(f"{dr_bob.name} - {dr_bob.role}")
+    print()
